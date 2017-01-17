@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5265EC6DF460A416CF1BB498 /* Pods_ZupMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D71ECE01DDE64645982AA7D5 /* Pods_ZupMovies.framework */; };
 		861AC82E1E2D725E00FEB45C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861AC82D1E2D725E00FEB45C /* AppDelegate.swift */; };
 		861AC8301E2D725E00FEB45C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861AC82F1E2D725E00FEB45C /* ViewController.swift */; };
 		861AC8331E2D725E00FEB45C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 861AC8311E2D725E00FEB45C /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 		861AC8341E2D725E00FEB45C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		861AC8371E2D725E00FEB45C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		861AC8391E2D725E00FEB45C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE1034DAA181FB917C0F3773 /* Pods-ZupMovies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZupMovies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZupMovies/Pods-ZupMovies.debug.xcconfig"; sourceTree = "<group>"; };
+		D0EB1180C15608ADCFE4354E /* Pods-ZupMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZupMovies.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZupMovies/Pods-ZupMovies.release.xcconfig"; sourceTree = "<group>"; };
+		D71ECE01DDE64645982AA7D5 /* Pods_ZupMovies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZupMovies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5265EC6DF460A416CF1BB498 /* Pods_ZupMovies.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0278C414E95C82E71A43306D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D71ECE01DDE64645982AA7D5 /* Pods_ZupMovies.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		861AC8211E2D725D00FEB45C = {
 			isa = PBXGroup;
 			children = (
 				861AC82C1E2D725E00FEB45C /* ZupMovies */,
 				861AC82B1E2D725E00FEB45C /* Products */,
+				8D674825BD1775BDC9551FB8 /* Pods */,
+				0278C414E95C82E71A43306D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +70,62 @@
 			isa = PBXGroup;
 			children = (
 				861AC82D1E2D725E00FEB45C /* AppDelegate.swift */,
-				861AC82F1E2D725E00FEB45C /* ViewController.swift */,
-				861AC8311E2D725E00FEB45C /* Main.storyboard */,
-				861AC8341E2D725E00FEB45C /* Assets.xcassets */,
-				861AC8361E2D725E00FEB45C /* LaunchScreen.storyboard */,
-				861AC8391E2D725E00FEB45C /* Info.plist */,
+				86FF05F01E2D79B600C9E758 /* Service */,
+				86FF05F11E2D79C200C9E758 /* Model */,
+				86FF05F21E2D79C800C9E758 /* View */,
+				86FF05F31E2D7A1C00C9E758 /* Assets */,
+				86FF05F41E2D7A2500C9E758 /* Supporting Files */,
 			);
 			path = ZupMovies;
+			sourceTree = "<group>";
+		};
+		86FF05F01E2D79B600C9E758 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		86FF05F11E2D79C200C9E758 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		86FF05F21E2D79C800C9E758 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				861AC8311E2D725E00FEB45C /* Main.storyboard */,
+				861AC82F1E2D725E00FEB45C /* ViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		86FF05F31E2D7A1C00C9E758 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				861AC8341E2D725E00FEB45C /* Assets.xcassets */,
+				861AC8361E2D725E00FEB45C /* LaunchScreen.storyboard */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		86FF05F41E2D7A2500C9E758 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				861AC8391E2D725E00FEB45C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8D674825BD1775BDC9551FB8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AE1034DAA181FB917C0F3773 /* Pods-ZupMovies.debug.xcconfig */,
+				D0EB1180C15608ADCFE4354E /* Pods-ZupMovies.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +135,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 861AC83C1E2D725E00FEB45C /* Build configuration list for PBXNativeTarget "ZupMovies" */;
 			buildPhases = (
+				551A132F2647C7F26F50CF4F /* [CP] Check Pods Manifest.lock */,
 				861AC8261E2D725D00FEB45C /* Sources */,
 				861AC8271E2D725D00FEB45C /* Frameworks */,
 				861AC8281E2D725D00FEB45C /* Resources */,
+				053C84CC0A96C076F76D2216 /* [CP] Embed Pods Frameworks */,
+				8028083EC8A6E760DA8F79B6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +163,7 @@
 				TargetAttributes = {
 					861AC8291E2D725D00FEB45C = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = KF2KVXY9S6;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -130,6 +198,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		053C84CC0A96C076F76D2216 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZupMovies/Pods-ZupMovies-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		551A132F2647C7F26F50CF4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8028083EC8A6E760DA8F79B6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZupMovies/Pods-ZupMovies-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		861AC8261E2D725D00FEB45C /* Sources */ = {
@@ -258,8 +374,10 @@
 		};
 		861AC83D1E2D725E00FEB45C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE1034DAA181FB917C0F3773 /* Pods-ZupMovies.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KF2KVXY9S6;
 				INFOPLIST_FILE = ZupMovies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.zup.ZupMovies;
@@ -270,8 +388,10 @@
 		};
 		861AC83E1E2D725E00FEB45C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0EB1180C15608ADCFE4354E /* Pods-ZupMovies.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KF2KVXY9S6;
 				INFOPLIST_FILE = ZupMovies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.zup.ZupMovies;
@@ -299,6 +419,7 @@
 				861AC83E1E2D725E00FEB45C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

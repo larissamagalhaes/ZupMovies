@@ -1,0 +1,47 @@
+PODS:
+  - Alamofire (3.5.1)
+  - AlamofireImage (2.5.0):
+    - Alamofire (~> 3.5)
+  - AlamofireObjectMapper (3.0.2):
+    - Alamofire (~> 3.2)
+    - ObjectMapper (~> 1.0)
+  - Cartography (1.0.1)
+  - KHATableViewWithSeamlessScrollingHeaderView (1.0.0)
+  - ObjectMapper (1.5.0)
+  - Pages (1.0.0)
+  - Presentation (3.0.0):
+    - Cartography
+    - Pages
+  - Realm (0.103.2):
+    - Realm/Headers (= 0.103.2)
+  - Realm/Headers (0.103.2)
+  - RealmSwift (0.103.2):
+    - Realm (= 0.103.2)
+  - StretchHeader (1.1.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireImage (~> 2.0)
+  - AlamofireObjectMapper
+  - KHATableViewWithSeamlessScrollingHeaderView
+  - ObjectMapper
+  - Presentation
+  - RealmSwift (~> 0.98)
+  - StretchHeader (~> 1.1)
+
+SPEC CHECKSUMS:
+  Alamofire: 0dfba1184a543e2aa160f4e39cac4e8aba48d223
+  AlamofireImage: 2d34936e5201270bb17a316a786e90e83b4a249d
+  AlamofireObjectMapper: 70f97cbf45c01c48d26aa07a1a7059a60ed7411d
+  Cartography: c1460e99395b824d9d75360b0382faeb0b33dcd7
+  KHATableViewWithSeamlessScrollingHeaderView: d40700e6b41c414525ecb7517766333c3097b5f8
+  ObjectMapper: 386645adca9d9d23b95eda43090b09d66444cf14
+  Pages: f3718e6f03a5e2787f6b0bff4becb3c7c19bcebc
+  Presentation: 2a7e0379ab403c0bd91c4f6d5c59480edba6f429
+  Realm: 448f0416079fe5b0ed947e7d86f3c4e1c75826cb
+  RealmSwift: 8a45cc8f02dfac093b72a3b5a01d567e27e15891
+  StretchHeader: 2ae5ef71f07fc7a9e7d9faec69a3b630f0c4383f
+
+PODFILE CHECKSUM: 250415cf2af9427e70ba62c4aedbbff94d950547
+
+COCOAPODS: 1.1.1

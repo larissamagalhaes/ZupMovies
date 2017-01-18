@@ -10,14 +10,10 @@ import UIKit
 
 class MovieViewController: UIViewController {
     
-    var searchBar: UISearchBar!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.titleView = searchBar
-        
-        searchBar.becomeFirstResponder()
     }
 
 }

@@ -14,12 +14,12 @@ class MovieTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     
-    @IBOutlet weak var yearLabel: UILabel!
+    @IBOutlet weak var genreYearLabel: UILabel!
     
     @IBOutlet weak var ratingLabel: UILabel!
     
-    @IBOutlet weak var bodyLabel: UILabel!
-
+    @IBOutlet weak var addButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

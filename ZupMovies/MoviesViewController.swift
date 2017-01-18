@@ -32,11 +32,9 @@ class MoviesViewController: ViewController, UICollectionViewDelegate, UICollecti
         addButton.layer.borderColor = UIColor(red: 225/255, green: 225/255, blue: 225/255, alpha: 1).cgColor
         
         addButton.layer.borderWidth = 1
-        
-//        tableView.tableFooterView = UIView(frame: .zero)
-
-//        tableView.estimatedRowHeight = UITableViewAutomaticDimension
     }
+    
+    //MARK: CollectionView Datasource, Delegate and FlowLayout
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
@@ -50,6 +48,11 @@ class MoviesViewController: ViewController, UICollectionViewDelegate, UICollecti
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "movie", sender: indexPath)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
         return CGFloat.leastNormalMagnitude
@@ -60,7 +63,6 @@ class MoviesViewController: ViewController, UICollectionViewDelegate, UICollecti
         return CGFloat.leastNormalMagnitude
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let widthScreen = UIScreen.main.bounds.width
@@ -70,6 +72,12 @@ class MoviesViewController: ViewController, UICollectionViewDelegate, UICollecti
         let width = widthScreen/floor(numberOfItens)
         
         return CGSize(width: width, height: 200)
+    }
+    
+    
+    @IBAction func searchTouched(_ sender: Any) {
+        
+        performSegue(withIdentifier: "addMovie", sender: self)
     }
     
     @IBAction func addTouched(_ sender: Any) {

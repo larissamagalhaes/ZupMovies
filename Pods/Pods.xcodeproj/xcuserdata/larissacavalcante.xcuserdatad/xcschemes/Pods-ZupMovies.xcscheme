@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7B306EDB637F2DD3AEA5296A48CAF2FC"
+               BlueprintIdentifier = "8F9A9ADFE512F6775891F6BC37595EE7"
                BuildableName = "Pods_ZupMovies.framework"
                BlueprintName = "Pods-ZupMovies"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7B306EDB637F2DD3AEA5296A48CAF2FC"
+            BlueprintIdentifier = "8F9A9ADFE512F6775891F6BC37595EE7"
             BuildableName = "Pods_ZupMovies.framework"
             BlueprintName = "Pods-ZupMovies"
             ReferencedContainer = "container:Pods.xcodeproj">

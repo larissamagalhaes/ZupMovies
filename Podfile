@@ -3,14 +3,15 @@ platform :ios, '9.0'
 target 'ZupMovies' do
 
   use_frameworks!
-
-    pod 'Alamofire'
-    pod 'AlamofireImage', '~> 2.0'
-    pod 'RealmSwift', '~> 0.98'
-    pod 'ObjectMapper'
-    pod 'AlamofireObjectMapper'
-    pod 'KHATableViewWithSeamlessScrollingHeaderView'
+  
+  inhibit_all_warnings!
+  
+    pod 'Alamofire', '~> 4.0'
+    pod 'RealmSwift', '~> 1.1'
+    pod 'AlamofireObjectMapper', '~> 4.0'
+#    pod 'KHATableViewWithSeamlessScrollingHeaderView'
     pod 'Presentation'
+    pod 'Pages'
     pod 'StretchHeader', '~> 1.1'
 
 

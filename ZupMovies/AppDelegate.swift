@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import RealmSwift
+
+var uiRealm = try! Realm()
+var baseURL = "http://www.omdbapi.com/"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

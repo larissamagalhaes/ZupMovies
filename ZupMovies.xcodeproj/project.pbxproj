@@ -115,9 +115,9 @@
 			isa = PBXGroup;
 			children = (
 				861AC8311E2D725E00FEB45C /* Main.storyboard */,
+				86FF05F51E2EBC1300C9E758 /* Generic View Controller */,
 				86FF06231E30309200C9E758 /* Search Movie */,
 				86FF05FA1E2EC13400C9E758 /* List Movies */,
-				86FF05F51E2EBC1300C9E758 /* Generic View Controller */,
 			);
 			name = View;
 			sourceTree = "<group>";

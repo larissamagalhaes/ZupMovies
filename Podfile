@@ -13,6 +13,8 @@ target 'ZupMovies' do
     pod 'Presentation'
     pod 'Pages'
     pod 'StretchHeader', '~> 1.1'
+    pod 'SwiftyJSON', '~> 3.1'
+    pod 'BRYXBanner', '~> 0.5'
 
 
 end

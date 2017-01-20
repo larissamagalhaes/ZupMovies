@@ -3,6 +3,7 @@ PODS:
   - AlamofireObjectMapper (4.0.1):
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 2.0)
+  - BRYXBanner (0.7.1)
   - Cartography (1.0.1)
   - ObjectMapper (2.2.2)
   - Pages (1.0.0)
@@ -15,18 +16,22 @@ PODS:
   - RealmSwift (1.1.0):
     - Realm (= 1.1.0)
   - StretchHeader (1.1.0)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - AlamofireObjectMapper (~> 4.0)
+  - BRYXBanner (~> 0.5)
   - Pages
   - Presentation
   - RealmSwift (~> 1.1)
   - StretchHeader (~> 1.1)
+  - SwiftyJSON (~> 3.1)
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   AlamofireObjectMapper: 842d2eed43a4d0593ff0110d54ac86a170c4519c
+  BRYXBanner: 34eabf9c6c009f187948ca78a4f3bba3767d0f04
   Cartography: c1460e99395b824d9d75360b0382faeb0b33dcd7
   ObjectMapper: 9e385c2295bcc4e16eabbcfc85db801442bba545
   Pages: f3718e6f03a5e2787f6b0bff4becb3c7c19bcebc
@@ -34,7 +39,8 @@ SPEC CHECKSUMS:
   Realm: ceecf1a4540c4ce9efe196fe73fa9855bce05bd8
   RealmSwift: 838058b2db95b12cb86bd0cf209df642c33fb60a
   StretchHeader: 2ae5ef71f07fc7a9e7d9faec69a3b630f0c4383f
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 4c08dba1aca92d9eade3fa7a6b334af3d227617a
+PODFILE CHECKSUM: bdc8708bbddcb17735a230ed74fbd64b121d423e
 
 COCOAPODS: 1.1.1

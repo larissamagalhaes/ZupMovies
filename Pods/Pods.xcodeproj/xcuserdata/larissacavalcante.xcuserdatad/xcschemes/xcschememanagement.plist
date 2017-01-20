@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>BRYXBanner.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Cartography.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -54,15 +59,40 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0F3B36547C3C2CC3060475E614BCBF32</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>294A087B3A2919A5184B2517E0DD4172</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2F5622F3B18DF497981AB58C6D1FC72F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>30783DE6E2EA7AA94FE67DACFBD97FCE</key>
+		<key>377CC9B9110FBF488211C7F05A34E0C7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>428D6997A432060412BDE42FF1498D01</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>49A560923733159025800D14DFABA015</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,22 +107,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>672528B84F129E20A53F9F002B4E435E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8D398084F90B53D2EDBDC07D28D24B95</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8F9A9ADFE512F6775891F6BC37595EE7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,7 +117,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9646E0F43C9B54EDF76106828A2FB959</key>
+		<key>974BA11F8C3CCD38952BC9C46932AA1E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C4680263839C1D7D0C2494A21843137D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

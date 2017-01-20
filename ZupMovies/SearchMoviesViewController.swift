@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class SearchMoviesViewController: ViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class SearchMoviesViewController: ViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, MovieServiceDelegate {
     
     @IBOutlet var searchBar: UISearchBar!
     
@@ -17,8 +17,14 @@ class SearchMoviesViewController: ViewController, UITableViewDelegate, UITableVi
     
     var movies: Results<Movie>!
     
+    var timer = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let predicate = NSPredicate(format: "isFavorite = 0")
+        
+        movies = Movie.all().filter(predicate)
         
         searchBar.becomeFirstResponder()
         
@@ -63,5 +69,46 @@ class SearchMoviesViewController: ViewController, UITableViewDelegate, UITableVi
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         
         dismiss(animated: true, completion: nil)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        timer.invalidate()
+        
+        if(searchText.characters.count >= 3){
+            
+            timer = Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: Selector(("searchDataTimer:")), userInfo: searchText, repeats: false)
+        }
+    
+    }
+    
+    func searchText(timer: Timer) {
+        
+        let searchText = timer.userInfo as! String
+        
+        searchDatabase(searchText: searchText)
+        
+        MovieService(delegate: self).requestMovie(name: searchText)
+    }
+    
+    func searchDatabase(searchText: String) {
+        
+        let predicate = NSPredicate(format: "title contains[c]%@ ", searchText)
+        
+        movies = Movie.all().filter(predicate)
+        
+        tableView.reloadData()
+    }
+    
+    //MAKE: Service Delegate
+
+    func movieSuccessful() {
+        
+        searchDatabase(searchText: searchBar.text!)
+    }
+    
+    func movieFailed(data: Data?) {
+        
+        
     }
 }

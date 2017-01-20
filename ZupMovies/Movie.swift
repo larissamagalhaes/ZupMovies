@@ -24,6 +24,7 @@ class Movie: Object, Mappable {
     dynamic var posterURL = ""
     dynamic var rating = ""
     dynamic var response = ""
+    dynamic var isFavorite = false
     
     required convenience init?(map: Map) {
         self.init()
@@ -63,13 +64,11 @@ class Movie: Object, Mappable {
     }
     
     
-    static func all() -> List<Movie> {
+    static func all() -> Results<Movie> {
         
-        let list = List<Movie>()
+        let data = uiRealm.objects(Movie.self)
         
-        list.append(objectsIn: uiRealm.objects(Movie.self))
-        
-        return list
+        return data
     }
     
     static func save(object: Movie) {
@@ -88,7 +87,7 @@ class Movie: Object, Mappable {
         }
     }
     
-    static func saveAll(objects: List<Movie>) {
+    static func saveAll(objects: Results<Movie>) {
         
         do {
             

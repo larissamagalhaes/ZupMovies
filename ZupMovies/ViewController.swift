@@ -7,13 +7,13 @@
 //
 
 import UIKit
-//import BRYXBanner
+import SwiftyJSON
+import BRYXBanner
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     func showAlertView(message: String) {
@@ -27,38 +27,22 @@ class ViewController: UIViewController {
         present(alertView, animated: true, completion: nil)
     }
     
-    func showAlertErroConexao(data: NSData?) {
+    func showAlertErroConexao(data: Data?) {
         
-//        let errorJSON = JSON(data: data!)
-//        
-////        let error = RequestError(message: errorJSON["error"].stringValue)
-//        
-//        showAlertView(error.message)
+        let errorJSON = JSON(data: data!)
+
+        let error = RequestError(message: errorJSON["Error"].stringValue)
+        
+        showBannerView(message: error.message, color: UIColor(red: 232/255, green: 80/255, blue: 80/255, alpha: 1))
     }
     
     func showBannerView(message: String, color: UIColor) {
         
-//        let banner = Banner(title: message, subtitle: nil, image: nil, backgroundColor: color)
-//        
-//        banner.dismissesOnTap = true
-//        
-//        banner.show(duration: 2)
-    }
-    
-    func showErrorBannerConexao(data: NSData?, statusCode: Int?) {
+        let banner = Banner(title: message, subtitle: nil, image: nil, backgroundColor: color)
         
-//        if(statusCode == 500) || (statusCode == 502) {
-//            
-//            showBannerView(message: "Erro ao tentar conectar com o servidor. Por favor, tente novamente mais tarde.", color: UIColor(red: 232/255, green: 80/255, blue: 80/255, alpha: 1))
-//            
-//        } else {
-//            
-//            let errorJSON = JSON(data: data!)
-//            
-////            let error = RequestError(message: errorJSON["error"].stringValue)
-//            
-//            showBannerView(error.message, color: UIColor(red: 232/255, green: 80/255, blue: 80/255, alpha: 1))
-        }
-//    }
+        banner.dismissesOnTap = true
+        
+        banner.show(duration: 2)
+    }
 }
 

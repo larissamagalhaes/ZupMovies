@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import Haneke
 
 class SearchMoviesViewController: ViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, MovieServiceDelegate {
     
@@ -61,7 +62,41 @@ class SearchMoviesViewController: ViewController, UITableViewDelegate, UITableVi
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MovieTableViewCell
         
+        let movie = movies[indexPath.row]
+    
+        let genre = movie.genre.components(separatedBy: ",").first
+        
+        cell.genreYearLabel.text = genre! + ", " + movie.year
+        
+        cell.titleLabel.text = movie.title
+        
+        cell.ratingLabel.text = movie.rating
+        
+        cell.addButton.indexPath = indexPath
+        
+        cell.addButton.addTarget(self, action: #selector(SearchMoviesViewController.favoriteMovieTouched(_ :)), for: .touchUpInside)
+        
+        let url = URL(string: movie.posterURL)
+        
+        cell.posterImageView.hnk_setImageFromURL(url!)
+        
         return cell
+    }
+    
+    //MARK: Actions
+    
+    func favoriteMovieTouched(_ button: Button) {
+        
+        let indexPath = button.indexPath
+        
+        let movie = movies[(indexPath?.row)!]
+        
+        try! uiRealm.write {
+            
+            movie.isFavorite = true
+        }
+        
+        dismiss(animated: true, completion: nil)
     }
     
     //MARK: Searchbar Delegate
@@ -109,6 +144,6 @@ class SearchMoviesViewController: ViewController, UITableViewDelegate, UITableVi
     
     func movieFailed(data: Data?) {
         
-        
+        showAlertErroConexao(data: data)
     }
 }

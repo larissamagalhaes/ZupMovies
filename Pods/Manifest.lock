@@ -5,6 +5,7 @@ PODS:
     - ObjectMapper (~> 2.0)
   - BRYXBanner (0.7.1)
   - Cartography (1.0.1)
+  - HanekeSwift (0.10.1)
   - ObjectMapper (2.2.2)
   - Pages (1.0.0)
   - Presentation (3.0.0):
@@ -22,17 +23,29 @@ DEPENDENCIES:
   - Alamofire (~> 4.0)
   - AlamofireObjectMapper (~> 4.0)
   - BRYXBanner (~> 0.5)
+  - HanekeSwift (from `https://github.com/jasonnoahchoi/HanekeSwift`, branch `swift3`)
   - Pages
   - Presentation
   - RealmSwift (~> 1.1)
   - StretchHeader (~> 1.1)
   - SwiftyJSON (~> 3.1)
 
+EXTERNAL SOURCES:
+  HanekeSwift:
+    :branch: swift3
+    :git: https://github.com/jasonnoahchoi/HanekeSwift
+
+CHECKOUT OPTIONS:
+  HanekeSwift:
+    :commit: 8571f0285ae7daa578866e50bc36cc85946e9ae8
+    :git: https://github.com/jasonnoahchoi/HanekeSwift
+
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   AlamofireObjectMapper: 842d2eed43a4d0593ff0110d54ac86a170c4519c
   BRYXBanner: 34eabf9c6c009f187948ca78a4f3bba3767d0f04
   Cartography: c1460e99395b824d9d75360b0382faeb0b33dcd7
+  HanekeSwift: 4113367892828e7700d24a384027de6ebc79aad1
   ObjectMapper: 9e385c2295bcc4e16eabbcfc85db801442bba545
   Pages: f3718e6f03a5e2787f6b0bff4becb3c7c19bcebc
   Presentation: 2a7e0379ab403c0bd91c4f6d5c59480edba6f429
@@ -41,6 +54,6 @@ SPEC CHECKSUMS:
   StretchHeader: 2ae5ef71f07fc7a9e7d9faec69a3b630f0c4383f
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: bdc8708bbddcb17735a230ed74fbd64b121d423e
+PODFILE CHECKSUM: c2c293b439ca8c8e351ef9f61c4a77339e7c6faf
 
 COCOAPODS: 1.1.1

@@ -18,7 +18,7 @@ class MovieTableViewCell: UITableViewCell {
     
     @IBOutlet weak var ratingLabel: UILabel!
     
-    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var addButton: Button!
     
     override func awakeFromNib() {
         super.awakeFromNib()

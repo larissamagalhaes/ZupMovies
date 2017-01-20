@@ -47,7 +47,7 @@
                                                             <color key="textColor" red="0.95294117649999999" green="0.96470588239999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krA-kr-Jyv">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krA-kr-Jyv" customClass="Button" customModule="ZupMovies" customModuleProvider="target">
                                                             <rect key="frame" x="270.5" y="14.5" width="25" height="25"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="25" id="Cn0-6L-7Wl"/>
@@ -159,7 +159,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JKc-IT-N18" sceneMemberID="viewController">
                     <toolbarItems/>
                     <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Zaf-F1-yQw">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zaf-F1-yQw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.054901960780000002" green="0.08235294118" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>

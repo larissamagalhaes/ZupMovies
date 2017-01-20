@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '294A087B3A2919A5184B2517E0DD4172'
+               BlueprintIdentifier = '047C8AB27AA2826413402CE0DCF186A0'
                BlueprintName = 'StretchHeader'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'StretchHeader.framework'>

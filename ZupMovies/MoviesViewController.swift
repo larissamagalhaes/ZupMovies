@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RealmSwift
+import Haneke
 
 class MoviesViewController: ViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
@@ -18,11 +20,20 @@ class MoviesViewController: ViewController, UICollectionViewDelegate, UICollecti
     
     @IBOutlet weak var addButton: UIButton!
     
+    var movies: Results<Movie>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         settingsLayout()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
+        let predicate = NSPredicate(format: "isFavorite = 1")
+        
+        movies = Movie.all().filter(predicate)
     }
     
     func settingsLayout() {
@@ -38,7 +49,18 @@ class MoviesViewController: ViewController, UICollectionViewDelegate, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 6
+        if(movies == nil) {
+            
+            noMoviesView.isHidden = false
+            
+            return 0
+            
+        } else {
+            
+            noMoviesView.isHidden = true
+        }
+        
+        return movies.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -74,6 +96,7 @@ class MoviesViewController: ViewController, UICollectionViewDelegate, UICollecti
         return CGSize(width: width, height: 200)
     }
     
+    //MARK: Actions
     
     @IBAction func searchTouched(_ sender: Any) {
         

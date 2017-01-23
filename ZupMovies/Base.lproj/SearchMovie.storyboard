@@ -21,9 +21,11 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="86" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bBf-dc-oO3">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="86" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bBf-dc-oO3">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.054901960780000002" green="0.08235294118" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.95294117649999999" green="0.96470588239999999" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="100" id="aje-9I-ayL" customClass="MovieTableViewCell" customModule="ZupMovies" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
@@ -32,23 +34,23 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pride" translatesAutoresizingMaskIntoConstraints="NO" id="1q1-8Y-UXL">
-                                                    <rect key="frame" x="8" y="8" width="55.5" height="83.5"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1q1-8Y-UXL">
+                                                    <rect key="frame" x="8" y="8" width="55" height="83"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="1q1-8Y-UXL" secondAttribute="height" multiplier="2:3" id="cHC-HO-7A3"/>
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Dd-hk-byC">
-                                                    <rect key="frame" x="71.5" y="23" width="295.5" height="53.5"/>
+                                                    <rect key="frame" x="71" y="23" width="296" height="54"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Orgulho e Preconceito" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rX9-Ts-ei1">
-                                                            <rect key="frame" x="0.0" y="0.0" width="262.5" height="19.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="263" height="20"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                                            <color key="textColor" red="0.95294117649999999" green="0.96470588239999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="textColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krA-kr-Jyv" customClass="Button" customModule="ZupMovies" customModuleProvider="target">
-                                                            <rect key="frame" x="270.5" y="14.5" width="25" height="25"/>
+                                                            <rect key="frame" x="271" y="15" width="25" height="25"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="25" id="Cn0-6L-7Wl"/>
                                                                 <constraint firstAttribute="width" secondItem="krA-kr-Jyv" secondAttribute="height" multiplier="1:1" id="T27-RL-cgF"/>
@@ -56,22 +58,22 @@
                                                             <state key="normal" image="add"/>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terror, 2000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGU-Ea-pIx">
-                                                            <rect key="frame" x="0.0" y="35.5" width="85.5" height="18"/>
+                                                            <rect key="frame" x="0.0" y="36" width="86" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <color key="textColor" red="0.95294117649999999" green="0.96470588239999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="textColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="By5-sX-And">
-                                                            <rect key="frame" x="97.5" y="37" width="15" height="15"/>
+                                                            <rect key="frame" x="98" y="37" width="15" height="15"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="By5-sX-And" secondAttribute="height" multiplier="1:1" id="S28-su-Ko0"/>
                                                                 <constraint firstAttribute="height" constant="15" id="XbQ-uU-0wp"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9,0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duQ-QD-6Ce">
-                                                            <rect key="frame" x="116.5" y="35.5" width="22" height="18"/>
+                                                            <rect key="frame" x="117" y="36" width="22" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <color key="textColor" red="0.95294117649999999" green="0.96470588239999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="textColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -143,8 +145,8 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <color key="barTintColor" red="0.070588235289999995" green="0.13725490200000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="barTintColor" red="0.054901960780000002" green="0.08235294118" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
                         <outlet property="delegate" destination="cNl-FZ-3fW" id="X3y-GD-TaC"/>
@@ -175,8 +177,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="add" width="256" height="256"/>
-        <image name="pride" width="150" height="211"/>
-        <image name="star" width="256" height="256"/>
+        <image name="add" width="25" height="25"/>
+        <image name="star" width="15" height="15"/>
     </resources>
 </document>

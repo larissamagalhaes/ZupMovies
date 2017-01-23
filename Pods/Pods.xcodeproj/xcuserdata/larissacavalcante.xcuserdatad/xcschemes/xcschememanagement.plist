@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MXParallaxHeader.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -45,6 +50,11 @@
 			<false/>
 		</dict>
 		<key>Presentation.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RKParallaxEffect.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -72,12 +82,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>03C550A6C539E359EFC58ADE9BA83523</key>
+		<key>0012CA5A35F3A92872EC1D5FDC544D8E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>047C8AB27AA2826413402CE0DCF186A0</key>
+		<key>02155FDFED0B5F898139ED8227EFCED6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,12 +97,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2F5622F3B18DF497981AB58C6D1FC72F</key>
+		<key>224E6E9F39E21DC6795EFF7D693AFA7D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3E43D8346456314888328203586EDE55</key>
+		<key>2F5622F3B18DF497981AB58C6D1FC72F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,17 +112,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4E12F87483B9B3D2D9310EC9134FFB5A</key>
+		<key>518BAF721CF3F6DC635D4A0602E7F9DB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>544212980401A6DA7806F65EAD8C6637</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>57CD236F04C874CD4E3FAB5768EA6BFF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,7 +137,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E2E30B8DCE9E3970C3983EC671D9FF70</key>
+		<key>CBE7FC778E5B542CFC25275C3700E3D1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DCAAD5BB53B126B6D84C745BC0248E69</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E4516E07B4FDDE063FB6D20495F1D72E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E75E5BAC0FE6E4C6A5E5F95EA6807F8A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

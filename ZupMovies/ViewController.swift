@@ -44,5 +44,18 @@ class ViewController: UIViewController {
         
         banner.show(duration: 2)
     }
+    
+    func attributedString(text: String, rangeString: String) -> NSMutableAttributedString {
+        
+        let attributedString = NSMutableAttributedString(string: text)
+        
+        let string = NSString(string: text)
+        
+        let range = string.range(of: rangeString)
+        
+        attributedString.addAttributes([NSFontAttributeName: UIFont.boldSystemFont(ofSize: 15)], range: range)
+        
+        return attributedString
+    }
 }
 

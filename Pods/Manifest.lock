@@ -6,6 +6,7 @@ PODS:
   - BRYXBanner (0.7.1)
   - Cartography (1.0.1)
   - HanekeSwift (0.10.1)
+  - MXParallaxHeader (0.6.0)
   - ObjectMapper (2.2.2)
   - Pages (1.0.0)
   - Presentation (3.0.0):
@@ -16,6 +17,7 @@ PODS:
   - Realm/Headers (1.1.0)
   - RealmSwift (1.1.0):
     - Realm (= 1.1.0)
+  - RKParallaxEffect (2.0.0)
   - StretchHeader (1.1.0)
   - SwiftyJSON (3.1.4)
 
@@ -24,9 +26,11 @@ DEPENDENCIES:
   - AlamofireObjectMapper (~> 4.0)
   - BRYXBanner (~> 0.5)
   - HanekeSwift (from `https://github.com/jasonnoahchoi/HanekeSwift`, branch `swift3`)
+  - MXParallaxHeader
   - Pages
   - Presentation
   - RealmSwift (~> 1.1)
+  - RKParallaxEffect (~> 2.0)
   - StretchHeader (~> 1.1)
   - SwiftyJSON (~> 3.1)
 
@@ -46,14 +50,16 @@ SPEC CHECKSUMS:
   BRYXBanner: 34eabf9c6c009f187948ca78a4f3bba3767d0f04
   Cartography: c1460e99395b824d9d75360b0382faeb0b33dcd7
   HanekeSwift: 4113367892828e7700d24a384027de6ebc79aad1
+  MXParallaxHeader: 2997592b8349baf8557ae0e4346f6b17e141de39
   ObjectMapper: 9e385c2295bcc4e16eabbcfc85db801442bba545
   Pages: f3718e6f03a5e2787f6b0bff4becb3c7c19bcebc
   Presentation: 2a7e0379ab403c0bd91c4f6d5c59480edba6f429
   Realm: ceecf1a4540c4ce9efe196fe73fa9855bce05bd8
   RealmSwift: 838058b2db95b12cb86bd0cf209df642c33fb60a
+  RKParallaxEffect: b49be3d5c88757f50004befb6be47d66959607d2
   StretchHeader: 2ae5ef71f07fc7a9e7d9faec69a3b630f0c4383f
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: c2c293b439ca8c8e351ef9f61c4a77339e7c6faf
+PODFILE CHECKSUM: 2d7023e2fd2d0588cd59f88e6901f900074be7ee
 
 COCOAPODS: 1.1.1

@@ -15,5 +15,8 @@ target 'ZupMovies' do
     pod 'SwiftyJSON', '~> 3.1'
     pod 'BRYXBanner', '~> 0.5'
     pod 'HanekeSwift', :git => 'https://github.com/jasonnoahchoi/HanekeSwift', :branch => 'swift3’
+    pod "MXParallaxHeader"
+    pod 'RKParallaxEffect', '~> 2.0'
+
 
 end

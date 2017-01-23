@@ -41,23 +41,23 @@ class MovieService {
     
     func requestMovie(name: String) {
         
-        let url = baseURL + ""
+        let url = baseURL
         
-        let parameters: [String: AnyObject] = ["t": name as AnyObject]
-        
+        let parameters: [String: AnyObject] = ["t": name as AnyObject, "y": "" as AnyObject, "plot": "full" as AnyObject, "r": "json" as AnyObject]
+                
         Alamofire.request(url, method: .get, parameters: parameters).validate().responseObject { (response: DataResponse<Movie>) in
             
             switch response.result {
                 
             case .success:
                                 
-                if let movie = response.result.value, response.result.value?.response != "True" {
+                if let movie = response.result.value, response.result.value?.response == "True" {
                     
                     Movie.save(object: movie)
                 }
                 
                 self.delegate.movieSuccessful()
-                
+
             case .failure:
                 
                 self.delegate.movieFailed(data: response.data)

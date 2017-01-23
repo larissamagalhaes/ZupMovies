@@ -10,4 +10,11 @@ import UIKit
 
 class MovieCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var posterImageView: UIImageView!
+    
+    @IBOutlet weak var ratingLabel: UILabel!
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var genderYearLabel: UILabel!
 }

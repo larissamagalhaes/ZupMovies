@@ -23,11 +23,9 @@ class SearchMoviesViewController: ViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let predicate = NSPredicate(format: "isFavorite = 0")
-        
-        movies = Movie.all().filter(predicate)
-        
         searchBar.becomeFirstResponder()
+        
+        tableView.rowHeight = 110
         
         tableView.tableFooterView = UIView(frame: .zero)
     }
@@ -36,7 +34,7 @@ class SearchMoviesViewController: ViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if(movies == nil) {
+        if(movies == nil) || (movies.count == 0) {
             
             let noResultLabel = UILabel(frame: tableView.bounds)
             noResultLabel.textColor = UIColor(white: 220/255.0, alpha: 1)
@@ -47,7 +45,7 @@ class SearchMoviesViewController: ViewController, UITableViewDelegate, UITableVi
             noResultLabel.sizeToFit()
             
             tableView.backgroundView = noResultLabel
-            
+        
             return 0
         
         } else {
@@ -76,6 +74,15 @@ class SearchMoviesViewController: ViewController, UITableViewDelegate, UITableVi
         
         cell.addButton.addTarget(self, action: #selector(SearchMoviesViewController.favoriteMovieTouched(_ :)), for: .touchUpInside)
         
+        var image = UIImage(named: "add")
+        
+        if(movie.isFavorite) {
+            
+            image = UIImage(named: "remove")
+        }
+        
+        cell.addButton.setImage(image, for: .normal)
+        
         let url = URL(string: movie.posterURL)
         
         cell.posterImageView.hnk_setImageFromURL(url!)
@@ -93,7 +100,7 @@ class SearchMoviesViewController: ViewController, UITableViewDelegate, UITableVi
         
         try! uiRealm.write {
             
-            movie.isFavorite = true
+            movie.isFavorite = !movie.isFavorite
         }
         
         dismiss(animated: true, completion: nil)
@@ -110,14 +117,10 @@ class SearchMoviesViewController: ViewController, UITableViewDelegate, UITableVi
         
         timer.invalidate()
         
-        if(searchText.characters.count >= 3){
-            
-            timer = Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: Selector(("searchDataTimer:")), userInfo: searchText, repeats: false)
-        }
-    
+        timer = Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(SearchMoviesViewController.searchText(_ :)), userInfo: searchText, repeats: false)
     }
     
-    func searchText(timer: Timer) {
+    func searchText(_ timer: Timer) {
         
         let searchText = timer.userInfo as! String
         
@@ -131,7 +134,7 @@ class SearchMoviesViewController: ViewController, UITableViewDelegate, UITableVi
         let predicate = NSPredicate(format: "title contains[c]%@ ", searchText)
         
         movies = Movie.all().filter(predicate)
-        
+                
         tableView.reloadData()
     }
     

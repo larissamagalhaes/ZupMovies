@@ -13,9 +13,7 @@ import Haneke
 class MoviesViewController: ViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    @IBOutlet weak var tableView: UITableView!
-    
+        
     @IBOutlet weak var noMoviesView: UIView!
     
     @IBOutlet weak var addButton: UIButton!
@@ -31,16 +29,18 @@ class MoviesViewController: ViewController, UICollectionViewDelegate, UICollecti
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let predicate = NSPredicate(format: "isFavorite = 1")
+        let predicate = NSPredicate(format: "isFavorite == 1")
         
         movies = Movie.all().filter(predicate)
+        
+        collectionView.reloadData()
     }
     
     func settingsLayout() {
         
         addButton.layer.cornerRadius = 5
         
-        addButton.layer.borderColor = UIColor(red: 225/255, green: 225/255, blue: 225/255, alpha: 1).cgColor
+        addButton.layer.borderColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1).cgColor
         
         addButton.layer.borderWidth = 1
     }
@@ -55,7 +55,7 @@ class MoviesViewController: ViewController, UICollectionViewDelegate, UICollecti
             
             return 0
             
-        } else {
+        } else if let _ = movies, movies.count > 0 {
             
             noMoviesView.isHidden = true
         }
@@ -66,6 +66,20 @@ class MoviesViewController: ViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MovieCollectionViewCell
+        
+        let movie = movies[indexPath.row]
+        
+        let genre = movie.genre.components(separatedBy: ",").first
+        
+        cell.genderYearLabel.text = genre! + ", " + movie.year
+        
+        cell.titleLabel.text = movie.title
+        
+        cell.ratingLabel.text = movie.rating
+        
+        let url = URL(string: movie.posterURL)
+        
+        cell.posterImageView.hnk_setImageFromURL(url!)
         
         return cell
     }
@@ -107,6 +121,22 @@ class MoviesViewController: ViewController, UICollectionViewDelegate, UICollecti
         
         performSegue(withIdentifier: "addMovie", sender: self)
         
+    }
+    
+    //MARK: Prepare for segue
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if(segue.identifier == "movie") {
+            
+            let indexPath = sender as! IndexPath
+            
+            let movie = movies[indexPath.row]
+            
+            let destination = segue.destination as! MovieViewController
+            
+            destination.id = movie.id
+        }
     }
 
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZrJ-VG-qe6">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZrJ-VG-qe6">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,96 +18,100 @@
                         <viewControllerLayoutGuide type="bottom" id="dYK-ue-zBQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dpz-Bk-rUB">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="374" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="woh-6g-i8c">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                                 <color key="backgroundColor" red="0.054901960780000002" green="0.08235294118" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="rcP-e0-Yrr">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FYc-jT-4VX">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                         </imageView>
                                         <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="alT-hu-uje">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="v1i-IQ-Tlp">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aef-5Z-FHW">
+                                                        <rect key="frame" x="147" y="20" width="120" height="160"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="160" id="F8s-nC-1lz"/>
+                                                            <constraint firstAttribute="width" secondItem="aef-5Z-FHW" secondAttribute="height" multiplier="3:4" id="hQK-xu-p3a"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="aef-5Z-FHW" firstAttribute="centerX" secondItem="v1i-IQ-Tlp" secondAttribute="centerX" id="9Wf-9R-XpD"/>
+                                                    <constraint firstItem="aef-5Z-FHW" firstAttribute="centerY" secondItem="v1i-IQ-Tlp" secondAttribute="centerY" id="E9b-hh-AYH"/>
+                                                </constraints>
                                             </view>
                                             <blurEffect style="dark"/>
                                         </visualEffectView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aef-5Z-FHW">
-                                            <rect key="frame" x="127.5" y="20" width="120" height="160"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="160" id="F8s-nC-1lz"/>
-                                                <constraint firstAttribute="width" secondItem="aef-5Z-FHW" secondAttribute="height" multiplier="3:4" id="hQK-xu-p3a"/>
-                                            </constraints>
-                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="FYc-jT-4VX" secondAttribute="bottom" id="8qt-2l-uFP"/>
                                         <constraint firstItem="alT-hu-uje" firstAttribute="leading" secondItem="FYc-jT-4VX" secondAttribute="leading" id="8xs-4u-Sw8"/>
                                         <constraint firstItem="FYc-jT-4VX" firstAttribute="leading" secondItem="rcP-e0-Yrr" secondAttribute="leading" id="GCh-kK-xdj"/>
-                                        <constraint firstItem="aef-5Z-FHW" firstAttribute="centerY" secondItem="FYc-jT-4VX" secondAttribute="centerY" id="Tkd-EB-pBp"/>
                                         <constraint firstItem="alT-hu-uje" firstAttribute="trailing" secondItem="FYc-jT-4VX" secondAttribute="trailing" id="YP8-15-57e"/>
                                         <constraint firstItem="alT-hu-uje" firstAttribute="top" secondItem="FYc-jT-4VX" secondAttribute="top" id="dac-sh-fYU"/>
                                         <constraint firstItem="alT-hu-uje" firstAttribute="bottom" secondItem="FYc-jT-4VX" secondAttribute="bottom" id="k0I-mb-Rpn"/>
-                                        <constraint firstItem="aef-5Z-FHW" firstAttribute="centerX" secondItem="FYc-jT-4VX" secondAttribute="centerX" id="s9O-dU-hO0"/>
                                         <constraint firstItem="FYc-jT-4VX" firstAttribute="top" secondItem="rcP-e0-Yrr" secondAttribute="top" id="uaB-Tq-9RX"/>
                                         <constraint firstAttribute="trailing" secondItem="FYc-jT-4VX" secondAttribute="trailing" id="upd-Nb-mJX"/>
                                     </constraints>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="150" id="EQT-yn-COG" customClass="MovieDetailTableViewCell" customModule="ZupMovies" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="228" width="375" height="150"/>
+                                        <rect key="frame" x="0.0" y="228" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EQT-yn-COG" id="QBG-qW-rwf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Lorem ipsum (1000)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uM-V1-nJp">
-                                                    <rect key="frame" x="8" y="8" width="359" height="19.5"/>
+                                                    <rect key="frame" x="8" y="8" width="398" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                     <color key="textColor" red="0.95294117649999999" green="0.96470588239999999" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Gênero: Lorem ipsum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGz-Tn-gea">
-                                                    <rect key="frame" x="8" y="35.5" width="147" height="18"/>
+                                                    <rect key="frame" x="8" y="36" width="147" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="240" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="D7J-av-7br">
-                                                    <rect key="frame" x="334" y="36.5" width="15" height="15"/>
+                                                    <rect key="frame" x="373" y="37" width="15" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="15" id="3Nz-45-bKO"/>
                                                         <constraint firstAttribute="width" secondItem="D7J-av-7br" secondAttribute="height" multiplier="1:1" id="5gj-Bt-Wyj"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ld6-2Y-42s">
-                                                    <rect key="frame" x="351" y="34.5" width="16" height="18"/>
+                                                    <rect key="frame" x="390" y="35" width="16" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="753" text="Diretor: Lorem ipsum dolor sit " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GiD-ay-WWC">
-                                                    <rect key="frame" x="8" y="61.5" width="359" height="18"/>
+                                                    <rect key="frame" x="8" y="62" width="398" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Atores principais: Lorem ipsum dolor sit amet, consectetur adipiscing elit. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBd-j0-xrO">
-                                                    <rect key="frame" x="8" y="87.5" width="359" height="36"/>
+                                                    <rect key="frame" x="8" y="88" width="398" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="746" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLr-bB-hBI">
-                                                    <rect key="frame" x="8" y="131.5" width="359" height="10.5"/>
+                                                    <rect key="frame" x="8" y="132" width="398" height="10"/>
                                                     <string key="text">Sinopse: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed sollicitudin lacus, nec tincidunt quam. Sed nisl elit, semper quis rhoncus eget, consequat eu diam. Maecenas sed congue est, eu facilisis velit. Suspendisse in luctus sem. Pellentesque hendrerit augue id ante tincidunt dapibus. Praesent ac libero a arcu commodo tristique eu et ante. </string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>

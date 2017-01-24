@@ -17,6 +17,6 @@ target 'ZupMovies' do
     pod 'HanekeSwift', :git => 'https://github.com/jasonnoahchoi/HanekeSwift', :branch => 'swift3'
     pod 'MXParallaxHeader'
     pod 'RKParallaxEffect', '~> 2.0'
-
+    pod 'ReachabilitySwift', '~> 3'
 
 end

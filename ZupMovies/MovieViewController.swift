@@ -30,6 +30,8 @@ class MovieViewController: ViewController, UITableViewDelegate, UITableViewDataS
         
         parallaxEffect = RKParallaxEffect(tableView: tableView)
         
+        parallaxEffect.isParallaxEffectEnabled = true
+        
         tableView.rowHeight = UITableViewAutomaticDimension
         
         tableView.estimatedRowHeight = 150
@@ -37,22 +39,31 @@ class MovieViewController: ViewController, UITableViewDelegate, UITableViewDataS
         movie = Movie.getByID(id: id as AnyObject)
         
         tableView.tableFooterView = UIView(frame: .zero)
-        
-        let url = URL(string: movie.posterURL)
-
-        posterBackgroundImageView.hnk_setImageFromURL(url!)
-        
-        posterImageView.hnk_setImageFromURL(url!)
-        
+    
         title = movie.title
         
+        loadingImage()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    func loadingImage() {
         
-        parallaxEffect.isParallaxEffectEnabled = true
+        if(movie.posterURL != "N/A") {
+            
+            let url = URL(string: movie.posterURL)
+            
+            posterBackgroundImageView.hnk_setImageFromURL(url!)
+            
+            posterImageView.hnk_setImageFromURL(url!)
+            
+        } else {
+            
+            posterBackgroundImageView.image = UIImage(named: "placeholder_movie")
+            
+            posterImageView.image = UIImage(named: "placeholder_movie")
+        }
     }
+    
+    //MARK: Tableview Delegate and Datasource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         

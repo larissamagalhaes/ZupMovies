@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 import Haneke
+import ReachabilitySwift
 
 class SearchMoviesViewController: ViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, MovieServiceDelegate {
     
@@ -19,6 +20,10 @@ class SearchMoviesViewController: ViewController, UITableViewDelegate, UITableVi
     var movies: Results<Movie>!
     
     var timer = Timer()
+    
+    let reachability = Reachability()
+    
+    var isConnection = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,37 +62,44 @@ class SearchMoviesViewController: ViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MovieTableViewCell
-        
-        let movie = movies[indexPath.row]
-    
-        let genre = movie.genre.components(separatedBy: ",").first
-        
-        cell.genreYearLabel.text = genre! + ", " + movie.year
-        
-        cell.titleLabel.text = movie.title
-        
-        cell.ratingLabel.text = movie.rating
-        
-        cell.addButton.indexPath = indexPath
-        
-        cell.addButton.addTarget(self, action: #selector(SearchMoviesViewController.favoriteMovieTouched(_ :)), for: .touchUpInside)
-        
-        var image = UIImage(named: "add")
-        
-        if(movie.isFavorite) {
+
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MovieTableViewCell
             
-            image = UIImage(named: "remove")
-        }
-        
-        cell.addButton.setImage(image, for: .normal)
-        
-        let url = URL(string: movie.posterURL)
-        
-        cell.posterImageView.hnk_setImageFromURL(url!)
-        
-        return cell
+            let movie = movies[indexPath.row]
+            
+            let genre = movie.genre.components(separatedBy: ",").first
+            
+            cell.genreYearLabel.text = genre! + ", " + movie.year
+            
+            cell.titleLabel.text = movie.title
+            
+            cell.ratingLabel.text = movie.rating
+            
+            cell.addButton.indexPath = indexPath
+            
+            cell.addButton.addTarget(self, action: #selector(SearchMoviesViewController.favoriteMovieTouched(_ :)), for: .touchUpInside)
+            
+            var image = UIImage(named: "add")
+            
+            if(movie.isFavorite) {
+                
+                image = UIImage(named: "remove")
+            }
+            
+            cell.addButton.setImage(image, for: .normal)
+            
+            if(movie.posterURL != "N/A") {
+                
+                let url = URL(string: movie.posterURL)
+                
+                cell.posterImageView.hnk_setImageFromURL(url!)
+                
+            } else {
+                
+                cell.posterImageView.image = UIImage(named: "placeholder_movie")
+            }
+            
+            return cell
     }
     
     //MARK: Actions
@@ -117,7 +129,7 @@ class SearchMoviesViewController: ViewController, UITableViewDelegate, UITableVi
         
         timer.invalidate()
         
-        timer = Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(SearchMoviesViewController.searchText(_ :)), userInfo: searchText, repeats: false)
+        timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(SearchMoviesViewController.searchText(_ :)), userInfo: searchBar.text, repeats: false)
     }
     
     func searchText(_ timer: Timer) {
@@ -126,7 +138,18 @@ class SearchMoviesViewController: ViewController, UITableViewDelegate, UITableVi
         
         searchDatabase(searchText: searchText)
         
-        MovieService(delegate: self).requestMovie(name: searchText)
+        if(reachability?.currentReachabilityStatus == Reachability.NetworkStatus.notReachable) && (isConnection){
+            
+            isConnection = false
+            
+            showAlertErroConexao(data: nil)
+        
+        } else if (reachability?.currentReachabilityStatus != Reachability.NetworkStatus.notReachable)  {
+            
+            isConnection = true
+            
+            MovieService(delegate: self).requestMovie(name: searchText)
+        }
     }
     
     func searchDatabase(searchText: String) {

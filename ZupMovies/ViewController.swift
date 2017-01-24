@@ -29,13 +29,22 @@ class ViewController: UIViewController {
     
     func showAlertErroConexao(data: Data?) {
         
-        let errorJSON = JSON(data: data!)
+        var message = ""
         
-        let message = errorJSON["Error"].string
+        if(data != nil) {
+            
+            let errorJSON = JSON(data: data!)
+            
+            let error = RequestError(message: errorJSON["Error"].stringValue)
+            
+             message = error.message
         
-        let error = RequestError(message: errorJSON["Error"].stringValue)
+        } else {
+            
+            message = "Verifique sua conexão e tente novamente mais tarde."
+        }
         
-        showBannerView(message: error.message, color: UIColor(red: 232/255, green: 80/255, blue: 80/255, alpha: 1))
+        showBannerView(message: message, color: UIColor(red: 232/255, green: 80/255, blue: 80/255, alpha: 1))
     }
     
     func showBannerView(message: String, color: UIColor) {

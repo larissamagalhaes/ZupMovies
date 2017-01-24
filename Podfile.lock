@@ -12,6 +12,7 @@ PODS:
   - Presentation (3.0.0):
     - Cartography
     - Pages
+  - ReachabilitySwift (3)
   - Realm (2.1.0):
     - Realm/Headers (= 2.1.0)
   - Realm/Headers (2.1.0)
@@ -29,6 +30,7 @@ DEPENDENCIES:
   - MXParallaxHeader
   - Pages
   - Presentation
+  - ReachabilitySwift (~> 3)
   - RealmSwift
   - RKParallaxEffect (~> 2.0)
   - StretchHeader (~> 1.1)
@@ -54,12 +56,13 @@ SPEC CHECKSUMS:
   ObjectMapper: 41e43e1a89f8060ef5ea5d04ba852e269a621d68
   Pages: f3718e6f03a5e2787f6b0bff4becb3c7c19bcebc
   Presentation: 2a7e0379ab403c0bd91c4f6d5c59480edba6f429
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
   Realm: bc829ad0ef3d4eea70c34cfcc3b1704d18d50df1
   RealmSwift: a4d4abbf0088c337cab5b738054395842e4b3052
   RKParallaxEffect: b49be3d5c88757f50004befb6be47d66959607d2
   StretchHeader: 2ae5ef71f07fc7a9e7d9faec69a3b630f0c4383f
   SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
 
-PODFILE CHECKSUM: 6deca27b0a0170bc9e0e709466f8b46018b5d396
+PODFILE CHECKSUM: baea64b7703203e83391ec6dd95f6119ba0f7eae
 
 COCOAPODS: 1.1.1

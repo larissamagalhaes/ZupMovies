@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kol-Fx-IKB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kol-Fx-IKB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -38,7 +38,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="175" height="186"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dJr-Ed-fGb">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_movie" translatesAutoresizingMaskIntoConstraints="NO" id="dJr-Ed-fGb">
                                                     <rect key="frame" x="39" y="16" width="98" height="130"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="dJr-Ed-fGb" secondAttribute="height" multiplier="3:4" id="b2h-Ly-M1P"/>
@@ -222,6 +222,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="placeholder_movie" width="16" height="16"/>
         <image name="sad" width="130" height="130"/>
         <image name="star_60" width="30" height="30"/>
     </resources>

@@ -22,8 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         print(uiRealm.configuration.fileURL!)
         
-//        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        
         return true
     }
 

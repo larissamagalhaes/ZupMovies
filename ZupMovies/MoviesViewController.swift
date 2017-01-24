@@ -77,9 +77,16 @@ class MoviesViewController: ViewController, UICollectionViewDelegate, UICollecti
         
         cell.ratingLabel.text = movie.rating
         
-        let url = URL(string: movie.posterURL)
+        if(movie.posterURL != "N/A") {
+            
+            let url = URL(string: movie.posterURL)
+            
+            cell.posterImageView.hnk_setImageFromURL(url!)
         
-        cell.posterImageView.hnk_setImageFromURL(url!)
+        } else {
+            
+            cell.posterImageView.image = UIImage(named: "placeholder_movie")
+        }
         
         return cell
     }

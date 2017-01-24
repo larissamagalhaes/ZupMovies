@@ -44,6 +44,8 @@ class MovieService {
         let url = baseURL
         
         let parameters: [String: AnyObject] = ["t": name as AnyObject, "y": "" as AnyObject, "plot": "full" as AnyObject, "r": "json" as AnyObject]
+        
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
                 
         Alamofire.request(url, method: .get, parameters: parameters).validate().responseObject { (response: DataResponse<Movie>) in
             
@@ -66,9 +68,13 @@ class MovieService {
                     Movie.save(object: movie)
                 }
                 
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                
                 self.delegate.movieSuccessful()
 
             case .failure:
+                
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 
                 self.delegate.movieFailed(data: response.data)
             }

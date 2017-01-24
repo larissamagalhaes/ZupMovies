@@ -30,7 +30,9 @@ class ViewController: UIViewController {
     func showAlertErroConexao(data: Data?) {
         
         let errorJSON = JSON(data: data!)
-
+        
+        let message = errorJSON["Error"].string
+        
         let error = RequestError(message: errorJSON["Error"].stringValue)
         
         showBannerView(message: error.message, color: UIColor(red: 232/255, green: 80/255, blue: 80/255, alpha: 1))

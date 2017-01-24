@@ -50,8 +50,18 @@ class MovieService {
             switch response.result {
                 
             case .success:
+                
+                let movies = Movie.all()
                                 
                 if let movie = response.result.value, response.result.value?.response == "True" {
+                    
+                    if let movieDB = movies.filter({$0.id == movie.id}).first {
+                        
+                        try! uiRealm.write {
+                            
+                            movie.isFavorite = movieDB.isFavorite
+                        }
+                    }
                     
                     Movie.save(object: movie)
                 }

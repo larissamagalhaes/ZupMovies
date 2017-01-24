@@ -7,7 +7,7 @@ target 'ZupMovies' do
   inhibit_all_warnings!
 
     pod 'Alamofire', '~> 4.0'
-    pod 'RealmSwift', '~> 1.1'
+    pod 'RealmSwift'
     pod 'AlamofireObjectMapper', '~> 4.0'
     pod 'Presentation'
     pod 'Pages'

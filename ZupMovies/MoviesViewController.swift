@@ -8,7 +8,7 @@
 
 import UIKit
 import RealmSwift
-import Haneke
+import AlamofireImage
 
 class MoviesViewController: ViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
@@ -81,7 +81,7 @@ class MoviesViewController: ViewController, UICollectionViewDelegate, UICollecti
             
             let url = URL(string: movie.posterURL)
             
-            cell.posterImageView.hnk_setImageFromURL(url!)
+            cell.posterImageView.af_setImage(withURL: url!)
         
         } else {
             

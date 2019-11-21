@@ -8,8 +8,8 @@
 
 import UIKit
 import MXParallaxHeader
-import Haneke
 import RKParallaxEffect
+import AlamofireImage
 
 class MovieViewController: ViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -51,9 +51,9 @@ class MovieViewController: ViewController, UITableViewDelegate, UITableViewDataS
             
             let url = URL(string: movie.posterURL)
             
-            posterBackgroundImageView.hnk_setImageFromURL(url!)
+            posterBackgroundImageView.af_setImage(withURL: url!)
             
-            posterImageView.hnk_setImageFromURL(url!)
+            posterImageView.af_setImage(withURL: url!)
             
         } else {
             

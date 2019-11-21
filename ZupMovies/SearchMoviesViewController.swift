@@ -8,8 +8,8 @@
 
 import UIKit
 import RealmSwift
-import Haneke
 import ReachabilitySwift
+import AlamofireImage
 
 class SearchMoviesViewController: ViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, MovieServiceDelegate {
     
@@ -92,7 +92,7 @@ class SearchMoviesViewController: ViewController, UITableViewDelegate, UITableVi
                 
                 let url = URL(string: movie.posterURL)
                 
-                cell.posterImageView.hnk_setImageFromURL(url!)
+                cell.posterImageView.af_setImage(withURL: url!)
                 
             } else {
                 

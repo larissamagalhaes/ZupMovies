@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:ZupMovies.xcodeproj">
+      location = "group:/Users/larissamagalhaes/Documents/Developer Workspace/Xcode Workspace/Freela/zup-movies/ZupMovies.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
